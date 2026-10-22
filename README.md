@@ -490,7 +490,7 @@ Le développement nécessite Node.js ≥ 22.12 (Vitest 4). Les packages publiés
 ## Avant publication npm
 
 1. Choisir le scope définitif : `npm run set-scope -- @votre-scope`, puis `npm install`.
-2. Renseigner `repository`, `homepage`, `bugs` et `author` dans les `package.json` une fois le dépôt public créé.
+2. Renseigner `author` dans les `package.json` (`repository`, `homepage` et `bugs` pointent déjà vers ce dépôt).
 3. Vérifier `npm run check` et `npm run pack:dry`.
 4. Valider le flux complet sur une vraie boutique Chariow, avec un produit gratuit ou une remise à 100 % (pas de
    paiement réel) et un Pulse de test.

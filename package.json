@@ -36,5 +36,13 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.72.0",
     "vitest": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloseije/chariow-typescript-sdk.git"
+  },
+  "homepage": "https://github.com/gloseije/chariow-typescript-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/gloseije/chariow-typescript-sdk/issues"
   }
 }

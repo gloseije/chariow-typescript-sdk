@@ -48,5 +48,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloseije/chariow-typescript-sdk.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/gloseije/chariow-typescript-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/gloseije/chariow-typescript-sdk/issues"
   }
 }
