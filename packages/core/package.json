@@ -1,0 +1,52 @@
+{
+  "name": "@gloseije/chariow-sdk",
+  "version": "0.1.0",
+  "description": "SDK TypeScript non officiel pour l'API Chariow : checkout, licences logicielles et Pulses (webhooks signés)",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "chariow",
+    "sdk",
+    "payments",
+    "checkout",
+    "license",
+    "licensing",
+    "webhooks",
+    "pulses",
+    "typescript"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.build.esm.json && tsc -p tsconfig.build.cjs.json && node ../../scripts/write-cjs-package.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

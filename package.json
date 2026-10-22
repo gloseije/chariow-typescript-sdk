@@ -1,0 +1,40 @@
+{
+  "name": "chariow-typescript-sdk",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Monorepo du SDK TypeScript Chariow et de son intégration NestJS",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/core",
+    "packages/nestjs"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "npm run build --workspace packages/core && npm run build --workspace packages/nestjs",
+    "typecheck": "npm run typecheck --workspaces",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run lint && npm run typecheck && npm run build && npm run test",
+    "pack:dry": "npm pack --dry-run --workspaces",
+    "set-scope": "node scripts/set-scope.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@nestjs/common": "^12.2.0",
+    "@nestjs/config": "^12.0.1",
+    "@nestjs/core": "^12.2.0",
+    "@nestjs/platform-express": "^12.2.0",
+    "@nestjs/testing": "^12.2.0",
+    "@types/node": "^22.20.0",
+    "eslint": "^9.39.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^4.1.0"
+  }
+}
